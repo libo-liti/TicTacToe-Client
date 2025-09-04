@@ -14,7 +14,7 @@ public class MainPanelController : MonoBehaviour
 
     public void OnClickMultiPlayButton()
     {
-        GameManager.Instance.ChangeToGameScene(Constants.GameType.MutiPlay);
+        GameManager.Instance.ChangeToGameScene(Constants.GameType.MultiPlay);
     }
 
     public void OnClickSettingButton()
