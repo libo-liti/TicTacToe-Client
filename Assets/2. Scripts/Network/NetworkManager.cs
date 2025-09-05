@@ -20,8 +20,7 @@ public class NetworkManager : Singleton<NetworkManager>
 
             yield return www.SendWebRequest();
 
-            if (www.result == UnityWebRequest.Result.ConnectionError ||
-                www.result == UnityWebRequest.Result.ProtocolError)
+            if (www.result == UnityWebRequest.Result.ConnectionError)
             {
                 // Todo : 서버 연결 오류에 대해 알림
             }

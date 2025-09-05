@@ -27,6 +27,7 @@ public class SigninPanelController : PanelController
         if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
         {
             // Todo : 누락된 값을 입력하도록 요청
+            Shake();
             return;
         }
 
@@ -46,7 +47,8 @@ public class SigninPanelController : PanelController
                     GameManager.Instance.OpenConfirmPanel("유저네임이 유효하지 않습니다.",
                         () =>
                         {
-                            
+                            usernameInputField.text = "";
+                            passwordInputField.text = "";
                         });
                 }
                 else if (result == 1)
@@ -54,14 +56,14 @@ public class SigninPanelController : PanelController
                     GameManager.Instance.OpenConfirmPanel("패스워드가 유효하지 않습니다.",
                         () =>
                         {
-                            
+                            passwordInputField.text = "";
                         });
                 }
-            }));
+            }));    
         
-        Hide(() =>
-        {
-            
-        });
+        // Hide(() =>
+        // {
+        //     
+        // });
     }
 }
